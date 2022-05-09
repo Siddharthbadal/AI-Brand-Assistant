@@ -9,13 +9,13 @@ Modules used
   - Tailwind CSS
 
 API Endpoints:
-	/generate_snippet :  Generate brand snippet
-	/generate_keywords : Generate keywords for the brand
-	/generate_brand :  Generate both keywords and snippet
+	- /generate_snippet :  Generate brand snippet
+	- /generate_keywords : Generate keywords for the brand
+	- /generate_brand :  Generate both keywords and snippet
 	
 Web App URLS:
-	/index : Home page of AI brand assitant
-	/search/prompt : searched brand details 
+	- /index : Home page of AI brand assitant
+	- /search/prompt : searched brand details 
 
 Run th FAST API project: uvicorn brandapi:app --reload
 
