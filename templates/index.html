@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="" rel="stylesheet">
+    <script src='https://unpkg.com/htmx.org@1.6.1'></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body  class="bg-gray-800 text-white">
+    <div class=" flex h-full">
+        <div class="container max-w-md m-auto p-5">
+            <div id="search-results" class='bg-gray-600 p-5 rounded-md text-white'>
+                <div class="text-center mb-4">
+                    
+                
+                <h3 class="text-4xl text-white"> BrandAI</h3>
+                
+                    <h5 class="text-l"> AI Brand assistant</h5>
+                    <h1>.....</h1>
+                </div>
+                <div class='text-center mb-4 text-slate-400'>
+                    <p>Enter you brand, and our AI will show you a tag line <span class="border-b mb-2">with keywords</span>    </p>
+                </div>
+                <div class="mb-4">
+                    <p class="text-white text-l mb-5">{{snippet}}</p>
+                    {% for key in keywords %}
+                    <button class="bg-gray-900  text-white py-2 px-1 m-1 rounded">
+                        {{key}}</button>
+                         {% endfor %}
+                </div>
+
+                <form action='/search' methord="GET" enctype="multipart/form-data">
+                    <input type="text" name='prompt' class="border p-2 w-full rounded-md focus:outline-gray-700 focus:outline text-gray-800" required>
+                    <input type="submit" name='submit' value='Submit'
+                     class=' w-full  font-bold border mt-4 p-2 bg-gray-900 rounded'>
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+    <br> <br>
+
+    
+
+</body>
+</html>
